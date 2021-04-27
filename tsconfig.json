@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    // Target Node >12.9 since it is a decent LTS to aim for.
+    "target": "es2020",
+    "module": "commonjs",
+    // "declaration": true,
+
+    // Strict Type-Checking Options
+    "strict": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+
+    "skipLibCheck": false,
+    "forceConsistentCasingInFileNames": true,
+
+    "outDir": "./lib/",
+    "rootDir": "./src/"
+  },
+  "include": ["src/**/*.ts"]
+}
