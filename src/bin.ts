@@ -34,7 +34,11 @@ program
   )
   .arguments("<paths...>")
   .action((filepaths, opts) => sourcemapUpload(filepaths, opts))
-  .parseAsync();
+  .parseAsync()
+  .catch((err) => {
+    console.error(err.message ?? "Unknown error");
+    process.exitCode = 1;
+  });
 
 function collectExtensions(value: string) {
   return value.split(",");
