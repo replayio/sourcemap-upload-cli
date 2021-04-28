@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "A CLI application for uploading sourcemaps to Replay for use while replaying recordings.",
   "bin": {
-    "replay-sourcemap-upload": "bin/sourcemap-upload.js"
+    "replay-sourcemap-upload": "bin/sourcemap-upload"
   },
   "scripts": {
     "build": "tsc",
