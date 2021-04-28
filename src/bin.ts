@@ -1,7 +1,7 @@
 /* Copyright 2020 Record Replay Inc. */
 
 import { program } from "commander";
-import { uploadSourceMaps, MessageLevel } from "@recordreplay/sourcemap-upload";
+import { uploadSourceMaps, LogCallback } from "@recordreplay/sourcemap-upload";
 
 program
   .requiredOption(
@@ -60,15 +60,15 @@ async function sourcemapUpload(
 ): Promise<void> {
   const { quiet, verbose, ...uploadOpts } = cliOpts;
 
-  let log;
+  let log: LogCallback | undefined;
   if (!quiet) {
     if (verbose) {
-      log = (level: MessageLevel, message: string) => {
+      log = (level, message) => {
         console.log(message);
       };
     } else {
-      log = (level: MessageLevel, message: string) => {
-        if (level === MessageLevel.Normal) {
+      log = (level, message) => {
+        if (level === "normal") {
           console.log(message);
         }
       };
