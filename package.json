@@ -1,6 +1,6 @@
 {
   "name": "@recordreplay/sourcemap-upload-cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A CLI application for uploading sourcemaps to Replay for use while replaying recordings.",
   "bin": {
     "replay-sourcemap-upload": "bin/sourcemap-upload"
