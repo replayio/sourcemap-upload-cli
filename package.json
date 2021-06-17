@@ -5,6 +5,9 @@
   "bin": {
     "replay-sourcemap-upload": "bin/sourcemap-upload"
   },
+  "engines": {
+    "node": ">=10.13"
+  },
   "scripts": {
     "build": "tsc",
     "lint": "eslint",

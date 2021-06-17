@@ -1,7 +1,9 @@
 {
   "compilerOptions": {
-    // Target Node >12.9 since it is a decent LTS to aim for.
-    "target": "es2020",
+    // Target Node > 10 since that is still in use in Google Firestore and
+    // some clients use 10.x everywhere to be consistent with it.
+    "target": "es2018",
+    "lib": ["es2018"],
     "module": "commonjs",
     // "declaration": true,
 
